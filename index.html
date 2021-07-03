@@ -26,6 +26,26 @@
             <div class="toggle"></div>
             <a href="#" class="btn">Hire Me</a>            
         </header>
+
+        <div class="imgBx">
+            <img src="lele.jpg" class="cover">
+        </div>
+        <div class="content">
+            <h2>Hola, soy<br><span>Leyder Quintero</span></h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi id quibusdam accusamus. Doloremque velit optio, quasi ipsam placeat at? Veritatis.</p>
+            <a href="#" class="btn">Descargar CV</a>
+        </div>
     </section>
+
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let sec = document.querySelector('.sec');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            sec.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

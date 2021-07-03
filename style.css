@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 body{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,6 +18,9 @@ body{
     justify-content: center;
     align-items: center;
     transition: 1s;
+}
+.navigation.active{
+    left: 0%;
 }
 .banner{
     position: relative;
@@ -63,6 +67,17 @@ body{
 }
 .sec{
     position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+}
+.sec.active{
+    left: 100%;
 }
 header{
     position: absolute;
@@ -85,7 +100,9 @@ header{
     align-items: center;
     cursor: pointer;
     transition: 0.5s;
-    background: #ccc;
+}
+.toggle.active{
+    left: -200px;
 }
 .toggle::before{
     content: '';
@@ -104,4 +121,31 @@ header{
     background: #777;
     transform: translateY(6px);
     transition: 0.5s;
+}
+.toggle.active::before{
+    transform: translateY(0px) rotate(135deg);
+    background: #fff;
+}
+.toggle.active::after{
+    transform: translateY(0px) rotate(-135deg);
+    background: #fff;
+}
+.btn{
+    position: absolute;
+    right: 30em;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #ff1455;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+.sec .imgBx{
+    position: relative;
+    min-width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
 }
