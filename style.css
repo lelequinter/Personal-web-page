@@ -144,14 +144,15 @@ header{
 }
 .sec .imgBx{
     position: relative;
-    min-width: 500px;
-    height: 500px;
+    min-width: 400px;
+    height: 400px;
     border-radius: 50%;
     overflow: hidden;
 }
 .sec .content{
-    max-width: 600px;
+    max-width: 700px;
     margin-left: 40px;
+    margin-right: 40px;
 }
 .sec .content h2{
     font-weight: 500;
@@ -174,3 +175,36 @@ header{
     right: 0;
     background: #2196f3;
 }
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*min-width: 100vh;
+    min-height: 100vh;*/
+    padding: 20px 50px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sci
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a{
+    position: relative;
+    margin-right: 20px;
+    display: inline-block;
+    transform: scale(0.75);
+    opacity: 0.8;
+}
+
+/* Ahora haremos que la plataforma sea adaptable */
