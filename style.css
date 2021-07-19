@@ -68,8 +68,8 @@ body{
 .sec{
     position: relative;
     left: 0;
-    min-width: 100vh;
-    min-height: 100vh;
+    min-width: 60vh;
+    min-height: 60vh;
     padding: 50px 50px;
     display: flex;
     justify-content: space-around;
@@ -123,16 +123,16 @@ header{
     transition: 0.5s;
 }
 .toggle.active::before{
-    transform: translateY(0px) rotate(135deg);
+    transform: translateY(0px) rotate(45deg);
     background: #fff;
 }
 .toggle.active::after{
-    transform: translateY(0px) rotate(-135deg);
+    transform: translateY(0px) rotate(-45deg);
     background: #fff;
 }
 .btn{
     position: relative;
-    right: 10em;
+    right: 8em;
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
@@ -146,6 +146,8 @@ header{
     position: relative;
     min-width: 400px;
     height: 400px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -208,3 +210,61 @@ footer
 }
 
 /* Ahora haremos que la pagina sea adaptable */
+@media (max-width: 991px)
+{
+    .sec
+    {
+        padding: 40px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header,
+    footer
+    {
+        padding: 20px 40px;
+    }
+    .btn
+    {
+    position: relative;
+    right: 70px;
+    }
+    .sec .imgBx
+    {
+        width: 300px;
+        min-width: 300px;
+        height: 300px;
+        margin-top: 80px;
+        margin-bottom: 10px;
+    }
+    .sec .content
+    {
+        margin-bottom: 150px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+    footer
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sci
+    {
+        padding: 0;
+    }
+    .sec .content h2 span
+    {
+        font-size: 1.8em;
+    }
+    .banner
+    {
+        display: none;
+    }
+    .navLink
+    {
+        width: 100%;
+    }
+    .toggle.active
+    {
+        left: -120px;
+    }
+}
